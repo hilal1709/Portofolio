@@ -78,69 +78,6 @@
 
         <section id="portfolio">
             <h2>Proyek Tambahan</h2>Since there is no selected code, I will provide a general improvement to the HTML structure and add some accessibility features. Here's the modified code:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Pribadi</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Portofolio Pribadi Muhammad Hilal Lazuardi Toha">
-    <meta name="keywords" content="Portofolio, Muhammad Hilal Lazuardi Toha, Web Developer">
-</head>
-<body>
-    <header>
-        <nav id="main-nav" role="navigation">
-            <ul>
-                <li><a href="#about" aria-label="Tentang Saya">Tentang Saya</a></li>
-                <li><a href="#projects" aria-label="Proyek">Proyek</a></li>
-                <li><a href="#portfolio" aria-label="Portofolio">Portofolio</a></li>
-                <li><a href="#gallery" aria-label="Galeri">Galeri</a></li>
-                <li><a href="#Fav-song" aria-label="Lagu Favorit">Lagu Favorit</a></li>
-                <li><a href="#fav-mv" aria-label="MV Favorit">MV Favorit</a></li>
-                <li><a href="#contact" aria-label="Hubungi Saya">Hubungi Saya</a></li>
-            </ul>
-        </nav>
-        <button id="hamburger-menu" aria-label="Menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-
-    <main>
-        <section id="about" role="region" aria-label="Tentang Saya">
-            <h1>Tentang Saya</h1>
-            <p>Halo! nama saya Muhammad Hilal Lazuardi Toha. Saya adalah seorang pengembang web yang antusias menciptakan aplikasi web yang fungsional dan menarik. Saya memiliki minat besar dalam desain UI/UX dan pengembangan front end.</p>
-            <p>Saya selalu berusaha untuk mengikuti tren teknologi terbaru dalam pengembangan web, termasuk teknik responsive design, UI/UX modern, dan framework populer seperti React, Vue, dan Angular.</p>
-            <p>Dengan pengalaman lebih dari 3 tahun dalam bidang pengembangan web, saya telah menyelesaikan berbagai proyek dari website sederhana hingga aplikasi web kompleks. Saya percaya bahwa desain yang baik harus menyeimbangkan estetika dan fungsionalitas.</p>
-            <div class="skills">
-                <h2>Keahlian:</h2>
-                <ul>
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                    <li>Responsive Web Design</li>
-                    <li>UI/UX Design</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Rest of the code remains the same -->
-```
-
-I added the following improvements:
-
-* Added `role` attributes to the navigation and sections to improve accessibility.
-* Added `aria-label` attributes to the navigation links and sections to provide a clear description of the content.
-* Added `aria-expanded` attribute to the hamburger menu button to indicate its state.
-* Improved the HTML structure by wrapping the navigation links in a `nav` element and adding a `role` attribute.
-* Added meta tags for description and keywords to improve search engine optimization (SEO).
-* Removed the unnecessary `id` attribute from the `header` element.
-* Renamed the `h2` element in the "Tentang Saya" section to `h1` to improve accessibility and SEO.
             <ul>
                 <li><strong>Website E-commerce:</strong> Dirancang dengan HTML, CSS, dan JavaScript untuk tampilan produk dan sistem checkout sederhana.</li>
                 <li><strong>Landing Page Animasi:</strong> Menggunakan GSAP untuk animasi dinamis dan desain interaktif.</li>
