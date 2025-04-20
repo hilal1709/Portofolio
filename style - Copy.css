@@ -460,3 +460,37 @@ input[type="submit"]:focus {
     filter: brightness(1.1);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+
+.hobbies, .languages, .skills {
+    margin-top: 20px;
+    background: #f0f7ff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.hobbies h3, .languages h3, .skills h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.hobbies ul, .languages ul, .skills ul {
+    list-style: none;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.hobbies li, .languages li, .skills li {
+    font-weight: 500;
+    position: relative;
+    padding-left: 15px;
+}
+
+.hobbies li::before, .languages li::before, .skills li::before {
+    content: "🎯";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
