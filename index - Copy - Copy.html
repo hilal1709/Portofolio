@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+    <link rel="stylesheet" href="style - Copy.css">
+</head>
+<body>
+    <header>
+        <h1>Portofolio Pribadi</h1>
+        <div class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#Fav-song">Lagu Favorit</a></li>
+                <li><a href="#fav-mv">MV Favorit</a></li>
+                <li><a href="#contact">Hubungi Saya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <div>
+                <h2>Tentang Saya</h2>
+                <p>Halo! nama saya Muhammad Hilal Lazuardi Toha. Saya adalah seorang pengembang web yang antusias menciptakan aplikasi web yang fungsional dan menarik. Saya memiliki minat besar dalam desain UI/UX dan pengembangan front end.</p>
+                <p>Saya selalu berusaha untuk mengikuti tren teknologi terbaru dalam pengembangan web, termasuk teknik responsive design, UI/UX modern, dan framework populer.</p>
+            </div>
+            <figure>
+                <img src="WhatsApp Image 2025-04-06 at 23.24.37_9a019c82.jpg" alt="Foto Profil">
+                <figcaption>Foto Profil</figcaption>
+            </figure>
+        </section>
+
+        <section id="projects">
+            <h2>Proyek Karya</h2>
+            <div class="projects-grid">
+                <article>
+                    <h3>Proyek 1: Aplikasi Accord</h3>
+                    <p>Aplikasi ini membantu pengguna mencari produk tas yang berkualitas. Dibuat dengan React dan Node.js, menyediakan fitur pencarian yang intuitif dan filter produk yang detail.</p>
+                    <img src="Screenshot 2025-04-06 233114.png" alt="Proyek 1">
+                </article>
+                <article>
+                    <h3>Proyek 2: Aplikasi Surat</h3>
+                    <p>Aplikasi ini adalah platform pemerintahan untuk melakukan pemilu secara online. Menggunakan teknologi blockchain untuk menjamin keamanan dan transparansi dalam proses pemilihan.</p>
+                    <img src="Screenshot 2025-04-06 233505.png" alt="Proyek 2">
+                </article>
+                <article>
+                    <h3>Proyek 3: Portfolio Website</h3>
+                    <p>Website portofolio responsif yang dibuat dengan HTML5, CSS3, dan JavaScript. Mengimplementasikan CSS Grid dan Flexbox untuk layout yang dinamis di berbagai ukuran layar.</p>
+                    <img src="Screenshot 2025-04-06 233505.png" alt="Proyek 3">
+                </article>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Galeri Foto</h2>
+            <div class="gallery">
+                <img src="WhatsApp Image 2025-04-06 at 23.24.37_9a019c82.jpg" alt="Foto 1">
+                <img src="Screenshot 2025-04-06 233114.png" alt="Foto 2">
+                <img src="Screenshot 2025-04-06 233505.png" alt="Foto 3">
+                <img src="WhatsApp Image 2025-04-06 at 23.24.37_9a019c82.jpg" alt="Foto 4">
+                <img src="Screenshot 2025-04-06 233114.png" alt="Foto 5">
+                <img src="Screenshot 2025-04-06 233505.png" alt="Foto 6">
+            </div>
+        </section>
+
+        <section id="Fav-song">
+            <h2>Favorit Lagu</h2>
+            <audio controls>
+                <source src="lagu.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+        </section>
+
+        <section id="fav-mv">
+            <h2>Favorit MV</h2>
+            <video controls width="100%" max-width="500px">
+                <source src="Post Malone, Swae Lee - Sunflower (Spider-Man_ Into the Spider-Verse) (Official Video).mp4" type="video/mp4">
+                Browser Anda tidak mendukung elemen video.
+            </video>
+        </section>
+
+        <section id="contact">
+            <h2>Hubungi Saya</h2>
+            <form action="#" method="post">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <input type="submit" value="Kirim">
+            </form>
+
+            <h3>Media Sosial</h3>
+            <ul>
+                <li>Instagram: <a href="https://www.instagram.com/hilal_lazuardi17/" target="_blank">@hilal_lazuardi17</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-hilal-lazuardi/" target="_blank">Muhammad Hilal Lazuardi</a></li>
+                <li>GitHub: <a href="https://github.com/hilal1709" target="_blank">hilal1709</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Muhammad Hilal Lazuardi Toha. Semua hak dilindungi.</p>
+        <div>
+            <a href="https://www.instagram.com/hilal_lazuardi17/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/muhammad-hilal-lazuardi/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/hilal1709" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('open');
+        });
+
+        document.querySelectorAll('#main-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('main-nav').classList.remove('open');
+            });
+        });
+    </script>
+
+    <script src="test.js"></script>
+</body>
+</html>
