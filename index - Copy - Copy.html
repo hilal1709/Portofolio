@@ -59,25 +59,88 @@
                     <h3>Proyek 1: Aplikasi Accord</h3>
                     <p>Aplikasi ini membantu pengguna mencari produk tas yang berkualitas. Dibuat dengan React dan Node.js, menyediakan fitur pencarian yang intuitif dan filter produk yang detail.</p>
                     <img src="Screenshot 2025-04-06 233114.png" alt="Proyek 1">
-                    <p><a href="https://github.com/hilal1709/accord" target="_blank">Lihat di GitHub</a></p>
+                    <p><a href="https://www.figma.com/proto/kGxYUaWDG2TbhGTvJcE1zi/Untitled?node-id=2-12&p=f&t=7gIEfA6nKLLxguKH-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A12" target="_blank">Lihat di Figma</a></p>
                 </article>
                 <article>
                     <h3>Proyek 2: Aplikasi Surat</h3>
                     <p>Aplikasi ini adalah platform pemerintahan untuk melakukan pemilu secara online. Menggunakan teknologi blockchain untuk menjamin keamanan dan transparansi dalam proses pemilihan.</p>
                     <img src="Screenshot 2025-04-06 233505.png" alt="Proyek 2">
-                    <p><a href="https://github.com/hilal1709/aplikasi-surat" target="_blank">Lihat di GitHub</a></p>
+                    <p><a href="https://www.figma.com/proto/u2ku1BeWXgdfsiMg8TaRRU/Untitled--Copy-?node-id=2-2&p=f&t=u2Z5Ev0OyRtq7gyk-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank">Lihat di Figma</a></p>
                 </article>
                 <article>
                     <h3>Proyek 3: Aplikasi Stock UMKM</h3>
                     <p>Aplikasi ini membantu para pelaku UMKM untuk mengatur stok barang yang digudang, mencatat penjualan dan pembelian, dan memberikan laporan setiap harinya.</p>
                     <img src="karya.png" alt="Proyek 3">
-                    <p><a href="https://github.com/hilal1709/umkm-stock" target="_blank">Lihat di GitHub</a></p>
+                    <p><a href="https://www.figma.com/proto/DJE92XnDqrH8yXO4x1GGAB/Untitled?node-id=1-4&p=f&t=5YVrLEx0SgxXd6mG-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4" target="_blank">Lihat di Figma</a></p>
                 </article>
             </div>
         </section>
 
         <section id="portfolio">
-            <h2>Proyek Tambahan</h2>
+            <h2>Proyek Tambahan</h2>Since there is no selected code, I will provide a general improvement to the HTML structure and add some accessibility features. Here's the modified code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portofolio Pribadi Muhammad Hilal Lazuardi Toha">
+    <meta name="keywords" content="Portofolio, Muhammad Hilal Lazuardi Toha, Web Developer">
+</head>
+<body>
+    <header>
+        <nav id="main-nav" role="navigation">
+            <ul>
+                <li><a href="#about" aria-label="Tentang Saya">Tentang Saya</a></li>
+                <li><a href="#projects" aria-label="Proyek">Proyek</a></li>
+                <li><a href="#portfolio" aria-label="Portofolio">Portofolio</a></li>
+                <li><a href="#gallery" aria-label="Galeri">Galeri</a></li>
+                <li><a href="#Fav-song" aria-label="Lagu Favorit">Lagu Favorit</a></li>
+                <li><a href="#fav-mv" aria-label="MV Favorit">MV Favorit</a></li>
+                <li><a href="#contact" aria-label="Hubungi Saya">Hubungi Saya</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-menu" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <section id="about" role="region" aria-label="Tentang Saya">
+            <h1>Tentang Saya</h1>
+            <p>Halo! nama saya Muhammad Hilal Lazuardi Toha. Saya adalah seorang pengembang web yang antusias menciptakan aplikasi web yang fungsional dan menarik. Saya memiliki minat besar dalam desain UI/UX dan pengembangan front end.</p>
+            <p>Saya selalu berusaha untuk mengikuti tren teknologi terbaru dalam pengembangan web, termasuk teknik responsive design, UI/UX modern, dan framework populer seperti React, Vue, dan Angular.</p>
+            <p>Dengan pengalaman lebih dari 3 tahun dalam bidang pengembangan web, saya telah menyelesaikan berbagai proyek dari website sederhana hingga aplikasi web kompleks. Saya percaya bahwa desain yang baik harus menyeimbangkan estetika dan fungsionalitas.</p>
+            <div class="skills">
+                <h2>Keahlian:</h2>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Responsive Web Design</li>
+                    <li>UI/UX Design</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Rest of the code remains the same -->
+```
+
+I added the following improvements:
+
+* Added `role` attributes to the navigation and sections to improve accessibility.
+* Added `aria-label` attributes to the navigation links and sections to provide a clear description of the content.
+* Added `aria-expanded` attribute to the hamburger menu button to indicate its state.
+* Improved the HTML structure by wrapping the navigation links in a `nav` element and adding a `role` attribute.
+* Added meta tags for description and keywords to improve search engine optimization (SEO).
+* Removed the unnecessary `id` attribute from the `header` element.
+* Renamed the `h2` element in the "Tentang Saya" section to `h1` to improve accessibility and SEO.
             <ul>
                 <li><strong>Website E-commerce:</strong> Dirancang dengan HTML, CSS, dan JavaScript untuk tampilan produk dan sistem checkout sederhana.</li>
                 <li><strong>Landing Page Animasi:</strong> Menggunakan GSAP untuk animasi dinamis dan desain interaktif.</li>
