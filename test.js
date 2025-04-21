@@ -1,63 +1,49 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger-menu');
-    const nav = document.getElementById('main-nav');
-    
-    hamburger.addEventListener('click', function() {
-        nav.classList.toggle('mobile-nav');
-        nav.classList.toggle('open');
-        hamburger.classList.toggle('active');
-    });
+let guestbook = JSON.parse(localStorage.getItem('guestbook')) || [];
 
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = nav.contains(event.target);
-        const isClickOnHamburger = hamburger.contains(event.target);
-        
-        if (!isClickInsideNav && !isClickOnHamburger && nav.classList.contains('open')) {
-            nav.classList.remove('open');
-            hamburger.classList.remove('active');
-        }
-    });
-    
-    const navLinks = document.querySelectorAll('#main-nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            nav.classList.remove('open');
-            hamburger.classList.remove('active');
-        });
-    });
+function saveEntries() {
+  localStorage.setItem('guestbook', JSON.stringify(guestbook));
+}
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    const galleryImages = document.querySelectorAll('.gallery img');
-    
-    galleryImages.forEach(img => {
-        img.addEventListener('click', function() {
-            const lightbox = document.createElement('div');
-            lightbox.classList.add('lightbox');
-            
-            const imgClone = this.cloneNode();
-            imgClone.classList.add('lightbox-img');
-            
-            lightbox.appendChild(imgClone);
-            document.body.appendChild(lightbox);
-            
-            lightbox.addEventListener('click', function() {
-                this.remove();
-            });
-        });
-    });
-});
+function renderEntries() {
+  const list = document.getElementById('guestList');
+  list.innerHTML = '';
+  guestbook.forEach((entry, index) => {
+    const div = document.createElement('div');
+    div.className = 'entry' + (entry.done ? ' done' : '');
+    div.innerHTML = `
+      <h4>${entry.name}</h4>
+      <p>${entry.message}</p>
+      <small>${entry.time}</small><br/>
+      <button onclick="toggleDone(${index})">${entry.done ? 'Belum' : 'Selesai'}</button>
+      <button onclick="deleteEntry(${index})">Hapus</button>
+    `;
+    list.appendChild(div);
+  });
+}
+
+function addEntry() {
+  const name = document.getElementById('guestName').value.trim();
+  const message = document.getElementById('guestMessage').value.trim();
+  if (name && message) {
+    const time = new Date().toLocaleString();
+    guestbook.push({ name, message, time, done: false });
+    saveEntries();
+    renderEntries();
+    document.getElementById('guestName').value = '';
+    document.getElementById('guestMessage').value = '';
+  }
+}
+
+function deleteEntry(index) {
+  guestbook.splice(index, 1);
+  saveEntries();
+  renderEntries();
+}
+
+function toggleDone(index) {
+  guestbook[index].done = !guestbook[index].done;
+  saveEntries();
+  renderEntries();
+}
+
+renderEntries();

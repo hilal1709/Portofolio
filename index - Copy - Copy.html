@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Pribadi</title>
     <link rel="stylesheet" href="style - Copy.css">
+    <script src="test.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,6 +24,8 @@
                 <li><a href="#Fav-song">Lagu Favorit</a></li>
                 <li><a href="#fav-mv">MV Favorit</a></li>
                 <li><a href="#contact">Hubungi Saya</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href ="#guestbook">Buku Tamu</a></li>
             </ul>
         </nav>
     </header>
@@ -171,6 +174,17 @@
             </ul>
         </section>
     </main>
+
+    <section id="guestbook">
+        <h2>📚 Buku Tamu</h2>
+
+        <input type="text" id="guestName" placeholder="Nama Anda" />
+        <textarea id="guestMessage" rows="3" placeholder="Pesan..."></textarea>
+        <button onclick="addEntry()">Kirim</button>
+      
+        <h3>Daftar Tamu:</h3>
+        <div id="guestList"></div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Muhammad Hilal Lazuardi Toha. Semua hak dilindungi.</p>
